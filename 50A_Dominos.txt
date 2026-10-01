@@ -1,0 +1,13 @@
+#include <iostream>
+
+int main(){
+
+    int n {};
+    int y {};
+
+
+
+
+
+    return 0;
+}
