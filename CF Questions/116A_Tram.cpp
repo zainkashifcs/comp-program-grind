@@ -29,7 +29,7 @@ int main (){
         
     }
 
-    std::cout << n;
+    std::cout << most;
 
 
     return 0;
