@@ -1,3 +1,12 @@
+// CF 69A - Young Physicist (rating 1000)
+// n forces, each with x, y and z parts. Balanced if ALL three totals are 0.
+// Trackers (xf, yf, zf) are created BEFORE the loop, so they keep adding up.
+// Inside the loop: read this force, then add it: xf += x (total on the LEFT).
+// Decision AFTER the loop: you need ALL the forces before you can answer.
+// += means "add to"; =+ is a different (wrong) thing.
+// Complexity: O(n)
+
+
 #include <iostream>
 
 int main (){
