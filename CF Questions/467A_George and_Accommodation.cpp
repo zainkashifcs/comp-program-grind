@@ -1,3 +1,12 @@
+// CF 467A - George and Accommodation
+// n rooms: p = people already living there, q = room capacity.
+// George and Alex want to move in TOGETHER, so a room needs 2+ free spaces.
+// Free spaces = q - p (capacity minus people already in it).
+// Pattern: read n, then read p and q INSIDE the loop, once per room.
+// If q - p >= 2, count++ (the count pattern, like 231A Team).
+// Print count ONCE, after the loop.
+// Complexity: O(n)
+
 #include <iostream>
 
 int main (){
@@ -19,11 +28,8 @@ int main (){
 
         if(total >= 2){
             count=count + 1;
-
-            
+    
         }
-
-
     }
 
     std::cout << count;
