@@ -1,3 +1,11 @@
+// CF 281A Word Capitalization
+// Problem: capitalise the first letter of a word, leave the rest unchanged.
+// Insight: chars are numbers; lowercase is 32 above uppercase ('a'=97, 'A'=65),
+//          so s[0] - 32 turns a lowercase first letter into a capital.
+// Edge case: if the first letter is already a capital, print the word as is
+//            (subtracting 32 from a capital would break it).
+// Complexity: O(1), only the first character is touched.
+
 #include <iostream>
 #include <string>
 
@@ -15,8 +23,5 @@ int main (){
         
     }
     
-
-
-
     return 0;
 }
