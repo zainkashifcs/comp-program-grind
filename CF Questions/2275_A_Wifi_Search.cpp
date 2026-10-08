@@ -1,3 +1,11 @@
+// CF Div 3 A - In Search of Convenience (redone from scratch, my own code)
+// Find ANY integer point exactly R away from (x0, y0).
+// "Output any" means look for the EASIEST construction first.
+// Step R to the right: (x0 + R, y0).
+//   The gaps are R across and 0 up, so the distance is sqrt(R^2 + 0) = R.
+// No loops to search and no
+
+
 #include <iostream>
 
 int main(){
