@@ -1,25 +1,23 @@
 #include <iostream>
-#include <vector>
+#include <string>
+#include <map>
+
 
 int main(){
 
-    int n;
-    std::cin >> n;
+    std::string s;
+    std::cin >> s;
+    std::map<char, int> freq;
 
-    int k;
-    std::cin >> k;
+    for (int i = 0; i < s.size(); i++){
 
-    std::vector<int> scores;
-
-    int count {0};
-
-    for(int i = 0; i < n; i++){
-
-        int x{};
-        push_back scores(x);
+        freq[s[i]]++;
     }
 
-    
+    for(auto p : freq){
+        
+        std::cout << p.first << ": " << p.second << '\n';
+    }
 
 
 
