@@ -1,14 +1,15 @@
 // CF 1A - Theatre Square (rating 1000)
-// Cover an n x m square with a x a tiles (tiles can go past the edge). How many tiles?
-// Tiles along each side = that side / a, ROUNDED UP:
+// Problem: 1A Theatre Square
+// Link: https://codeforces.com/problemset/problem/1/A
+// Tags: math, implementation
+// Idea: Cover an n x m square with a x a tiles (tiles can go past the edge). How many tiles?
+//   Tiles along each side = that side / a, ROUNDED UP:
 //   if (n % a != 0) then n / a + 1, otherwise n / a (the same for m).
-//   % = remainder, / = division. Don't mix them up!
+//   Answer = tilesN * tilesM. No loop needed: it's pure maths. Complexity: O(1).
+// Lesson: % = remainder, / = division. Don't mix them up!
 //   Use integer rounding, NOT ceil() (decimals can be inaccurate with huge numbers).
-// Answer = tilesN * tilesM.
-// LONG LONG everywhere: n and m are up to 1e9, so the answer can reach 1e18,
+//   LONG LONG everywhere: n and m are up to 1e9, so the answer can reach 1e18,
 //   and an int (max ~2.1e9) would overflow.
-// No loop needed: it's pure maths.
-// Complexity: O(1)
 
 
 #include <iostream>
