@@ -1,7 +1,13 @@
 // Associative Array
-// std::map instead of unordered_map: anti-hash tests can make
-// unordered_map O(n) per op (TLE). map is O(log n) guaranteed.
-// Type 0 k v -> set a[k]=v ; type 1 k -> print a[k] (0 if unset)
+// Problem: Associative Array
+// Tags: data structures, maps
+// Idea: q queries. "0 k v" sets a[k] = v; "1 k" prints a[k] (0 if it was never set).
+//   Keys go up to 1e18, so no plain array: store them in a map.
+//   Complexity: O(q log q) time, O(q) space.
+// Lesson: Use std::map, not unordered_map. Anti-hash tests can force unordered_map
+//   to O(n) per operation (TLE); std::map is O(log n) guaranteed.
+
+
 #include <bits/stdc++.h>
 
 int main(){

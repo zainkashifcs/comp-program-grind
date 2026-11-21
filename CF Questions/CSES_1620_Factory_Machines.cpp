@@ -1,8 +1,15 @@
 // CSES 1620 - Factory Machines
-// Binary search on the answer (time). Closed interval lo<=hi, store ans.
-// Upper bound: fastest machine alone makes t products in fastest*t.
-// Early break stops the count overflowing.
-// Time: O(n log(fastest*t))   Space: O(n)
+// Problem: CSES 1620 Factory Machines
+// Link: https://cses.fi/problemset/task/1620
+// Tags: binary search on the answer
+// Idea: n machines, machine i makes one product every k[i] seconds. Minimum time to make t products?
+//   In time T we make sum(T / k[i]) products, and that only grows as T grows (monotone),
+//   so binary search on T. Upper bound: the fastest machine alone makes t in fastest * t.
+//   Complexity: O(n log(fastest * t)) time, O(n) space.
+// Lesson: Closed interval (lo <= hi) with a stored ans. Break out of the counting loop
+//   as soon as made >= t, otherwise the sum can overflow even a long long.
+
+
 #include <bits/stdc++.h>
 
 int main(){

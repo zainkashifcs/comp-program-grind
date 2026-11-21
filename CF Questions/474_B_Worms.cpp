@@ -1,6 +1,15 @@
-// CF 474B - Worms
-// Prefix sums over pile sizes, then lower_bound for each query.
-// Time: O(n + m log n)   Space: O(n)
+// CF 474B - Worms (rating 1200)
+// Problem: 474B Worms
+// Link: https://codeforces.com/problemset/problem/474/B
+// Tags: binary search, implementation
+// Idea: Piles of worms are numbered in order. For each worm label, which pile is it in?
+//   Build prefix sums: pre[i] = total worms in piles 0..i.
+//   The answer is the first pile whose running total reaches q -> lower_bound on pre.
+//   Complexity: O(n + m log n) time, O(n) space.
+// Lesson: Prefix sums turn "which range is this in?" into a sorted array you can binary search.
+//   lower_bound returns the first element >= q, which is exactly the pile we want.
+
+
 #include <bits/stdc++.h>
 
 int main(){
