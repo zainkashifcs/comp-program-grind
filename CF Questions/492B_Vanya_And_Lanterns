@@ -1,0 +1,28 @@
+#include <algorithm>
+#include <iomanip>
+#include <iostream>
+#include <vector>
+
+int main() {
+    int n;
+    long long l;
+    std::cin >> n >> l;
+
+    std::vector<long long> a(n);
+    for (int i = 0; i < n; i++) {
+        std::cin >> a[i];
+    }   
+
+    std::sort(a.begin(), a.end());
+
+    long long maxGap = 0;
+    for (int i = 1; i < n; i++) {
+        maxGap = std::max(maxGap, a[i] - a[i - 1]);
+    }
+
+    double d = std::max({(double)a[0], (double)(l - a[n - 1]), maxGap / 2.0});
+
+    std::cout << std::fixed << std::setprecision(10) << d << '\n';
+
+    return 0;
+}
