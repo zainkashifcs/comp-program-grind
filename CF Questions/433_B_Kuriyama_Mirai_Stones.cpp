@@ -5,6 +5,7 @@
 // pref[i] = sum of first i elements (1-indexed, pref[0] = 0); range [l, r] = pref[r] - pref[l - 1].
 // Use long long: max sum is 1e5 * 1e9 = 1e14, which overflows 32-bit int.
 // Complexity: O(n log n + m)
+// Redo 24 Nov: independent, ~13 min (overflow arithmetic done before choosing types).
 
 #include <iostream>
 #include <vector>
